@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>NEON VOID</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <div class="hud">
+    <div>SCORE <b id="score">0</b></div>
+    <div>WAVE <b id="wave">1</b></div>
+    <div id="hp" class="hearts"></div>
+    <div>BEST <b id="best">0</b></div>
+  </div>
+
+  <div class="stage">
+    <canvas id="game"></canvas>
+
+    <section id="menu" class="overlay">
+      <h1>NEON<span>VOID</span></h1>
+      <p class="tag">Survive the waves. Beat the bosses.</p>
+      <button id="startBtn">START</button>
+      <ul class="help">
+        <li><b>Move</b> WASD / Arrows / drag with finger or mouse</li>
+        <li><b>Fire</b> automatic</li>
+        <li><b>Pause</b> P &nbsp; <b>Mute</b> M</li>
+      </ul>
+      <div class="legend">
+        <span class="p t">T</span> Triple shot
+        <span class="p r">R</span> Rapid fire
+        <span class="p s">S</span> Shield
+        <span class="p h">+</span> Heal
+      </div>
+    </section>
+
+    <section id="over" class="overlay hidden">
+      <h2>GAME OVER</h2>
+      <p class="big" id="final">0</p>
+      <p id="newbest" class="gold hidden">NEW HIGH SCORE!</p>
+      <button id="againBtn">PLAY AGAIN</button>
+    </section>
+
+    <section id="paused" class="overlay hidden">
+      <h2>PAUSED</h2>
+      <p class="tag">Press P or tap to resume</p>
+    </section>
+  </div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
